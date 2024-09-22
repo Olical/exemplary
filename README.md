@@ -1,4 +1,4 @@
-# Exemplary
+# Exemplary [![Clojars Project](https://img.shields.io/clojars/v/uk.me.oli/exemplary.svg)](https://clojars.org/uk.me.oli/exemplary)
 
 > Very good and suitable to be copied by other people.
 >
