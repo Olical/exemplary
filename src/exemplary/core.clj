@@ -50,6 +50,7 @@
                     (map (comp #(str " " %) pr-str))
                     (str/join "\n"))))))))
 
+      (require 'clojure.test)
       (binding [*ns* (:ns meta)]
         (eval
          `(clojure.test/deftest
