@@ -1,12 +1,12 @@
 # Exemplary [![Clojars Project](https://img.shields.io/clojars/v/uk.me.oli/exemplary.svg)](https://clojars.org/uk.me.oli/exemplary) [![cljdoc badge](https://cljdoc.org/badge/uk.me.oli/exemplary)](https://cljdoc.org/d/uk.me.oli/exemplary)
 
+## Turns your examples into documentation and runnable tests.
+
 > Very good and suitable to be copied by other people.
 >
 > &mdash; <cite>[Cambridge English Dictionary][dict-def]</cite>
 
-Write real example code in function metadata, share those examples as text in your docstrings and exported [cljdoc][]. As a side effect, tests are created in the equivalent `-test` suffixed namespace to check that your examples continue to work.
-
-Test runners like [kaocha][] can automatically re-run these example based tests as you make changes.
+Exemplary will export examples that you write for your functions into the function doc string. It will also create tests in the match `-test` suffixed namespace that can be executed by your test runner. Test runners like [kaocha][] can automatically re-run these example based tests as you make changes.
 
 ## Usage
 
@@ -61,7 +61,6 @@ This library is still very new and I'd love to hear your thoughts on how we coul
 
 [dict-def]: https://dictionary.cambridge.org/dictionary/english/exemplary
 [kaocha]: https://github.com/lambdaisland/kaocha
-[cljdoc]: https://cljdoc.org/
 [malli-dev-inst]: https://github.com/metosin/malli/blob/master/docs/function-schemas.md#development-instrumentation
 [malli]: https://github.com/metosin/malli
 [mastodon]: https://mastodon.social/@Olical
