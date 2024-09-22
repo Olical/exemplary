@@ -1,42 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-      
-  
-  <modelVersion>4.0.0</modelVersion>
-      
-  
-  <groupId>uk.me.oli</groupId>
-      
-  
-  <artifactId>exemplary</artifactId>
-      
-  
-  <version>0.1.0</version>
-      
-  
-  <name>exemplary</name>
-      
-  
-  <licenses>
-            
-    
-    <license>
-                  
-      
-      <name>Unlicense</name>
-                  
-      
-      <url>http://unlicense.org/</url>
-                  
-      
-      <distribution>repo</distribution>
-                
-    
-    </license>
           
   
-  </licenses>
+  
+  
+  <modelVersion>4.0.0</modelVersion>
+          
+  
+  
+  
+  <groupId>uk.me.oli</groupId>
+          
+  
+  
+  
+  <artifactId>exemplary</artifactId>
+          
+  
+  
+  
+  <version>0.1.1</version>
+          
+  
+  
+  
+  <name>exemplary</name>
+          
+  
+  
+  
+  <licenses>
+                    
+    
+    
+    
+    <license>
+                              
       
+      
+      
+      <name>Unlicense</name>
+                              
+      
+      
+      
+      <url>http://unlicense.org/</url>
+                              
+      
+      
+      
+      <distribution>repo</distribution>
+                            
+    
+    
+    
+    </license>
+                  
+  
+  
+  
+  </licenses>
+          
+  
+  
   
   <dependencies>
         
@@ -51,59 +77,107 @@
     </dependency>
       
   </dependencies>
-      
+          
+  
+  
   
   <build>
-            
+                    
+    
+    
     
     <sourceDirectory>src</sourceDirectory>
-  <resources>
-    <resource>
-      <directory>src</directory>
-      <excludes>
-        <exclude>giants_shoulders/**</exclude>
-      </excludes>
-    </resource>
-  </resources>
           
+    
+    <resources>
+                
+      
+      <resource>
+                      
+        
+        <directory>src</directory>
+                      
+        
+        <excludes>
+                            
+          
+          <exclude>giants_shoulders/**</exclude>
+                          
+        
+        </excludes>
+                    
+      
+      </resource>
+              
+    
+    </resources>
+                  
+  
+  
   
   </build>
-      
+          
+  
+  
   
   <repositories>
-            
+                    
+    
+    
     
     <repository>
-                  
+                              
+      
+      
       
       <id>clojars</id>
-                  
+                              
+      
+      
       
       <url>https://repo.clojars.org/</url>
-                
+                            
+    
+    
     
     </repository>
-          
+                  
+  
+  
   
   </repositories>
-      
-  
-  <scm>
-            
-    
-    <url>https://github.com/Olical/exemplary</url>
-            
-    
-    <tag>05fcbb0cf95d5a2a41c30d6c482dbdc45f556c05</tag>
-            
-    
-    <connection>scm:git:git@github.com:Olical/exemplary.git</connection>
-            
-    
-    <developerConnection>scm:git:git@github.com:Olical/exemplary.git</developerConnection>
           
   
-  </scm>
+  
+  
+  <scm>
+                    
     
+    
+    
+    <url>https://github.com/Olical/exemplary</url>
+                    
+    
+    
+    
+    <tag>76fe07a6a303e3c3bd73e1bd6d4256ce2380fb70</tag>
+                    
+    
+    
+    
+    <connection>scm:git:git@github.com:Olical/exemplary.git</connection>
+                    
+    
+    
+    
+    <developerConnection>scm:git:git@github.com:Olical/exemplary.git</developerConnection>
+                  
+  
+  
+  
+  </scm>
+        
+
+
 
 </project>
