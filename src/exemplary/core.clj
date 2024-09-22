@@ -22,7 +22,7 @@
   "Moves a var from one ns to another. Also copies all metadata over to the new var but without the :ns key which will be different now."
   [from-ns to-ns var-name]
   (let [var (ns-resolve from-ns var-name)]
-    (intern to-ns var-name var)
+    (intern to-ns var-name (var-get var))
     (ns-unmap from-ns var-name)
     (let [moved-var (ns-resolve to-ns var-name)]
       (alter-meta! moved-var merge (dissoc (meta var) :ns))
@@ -88,12 +88,11 @@
           (move-var original-ns (ns->test-ns original-ns) test-var-name))))))
 
 (defn process-ns!
-  "Runs all vars in a ns through process-var! When given no arguments it will process the current ns."
-  ([] (process-ns! *ns*))
-  ([ns]
-   (doseq [var (vals (ns-interns ns))]
-     (when (var? var)
-       (process-var! var)))))
+  "Runs all vars in a ns through process-var!"
+  [ns]
+  (doseq [var (vals (ns-interns ns))]
+    (when (var? var)
+      (process-var! var))))
 
 (defn process-every-ns!
   "Runs all vars in all namespaces through process-var!"

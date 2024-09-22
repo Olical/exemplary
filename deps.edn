@@ -3,7 +3,8 @@
 
  :aliases
  {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.91.1392"}
-                      nubank/matcher-combinators {:mvn/version "3.9.1"}}
+                      nubank/matcher-combinators {:mvn/version "3.9.1"}
+                      tortue/spy {:mvn/version "2.15.0"}}
          :main-opts ["-m" "kaocha.runner"]}
   :repl {:extra-deps {cider/cider-nrepl {:mvn/version "0.50.2"}
                       com.bhauman/rebel-readline {:mvn/version "0.1.4"}
