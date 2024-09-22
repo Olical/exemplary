@@ -6,7 +6,7 @@
 >
 > &mdash; <cite>[Cambridge English Dictionary][dict-def]</cite>
 
-Exemplary will export examples that you write for your functions into the function doc string. It will also create tests in the match `-test` suffixed namespace that can be executed by your test runner. Test runners like [kaocha][] can automatically re-run these example based tests as you make changes.
+Exemplary will export examples that you write for your functions into the function doc string. It will also create tests in the matching `-test` suffixed namespace that can be executed by your test runner. Test runners like [kaocha][] can automatically re-run these example based tests as you make changes.
 
 ## Usage
 
