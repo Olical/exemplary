@@ -33,6 +33,7 @@
 
   You must quote your code to ensure it doesn't execute immidiately. So you will have something like one of these in your function params which come after the doc string:
 
+  ```clojure
   (defn foo \"Some info\"
     {:exemplary.core/example
      '(= 10 (+ 5 5))}
@@ -44,7 +45,8 @@
      '((= 10 (+ 5 5))
        (pos? 3))}
     []
-    :result)"
+    :result)
+  ```"
 
   [var]
 
