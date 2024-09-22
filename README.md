@@ -36,7 +36,7 @@ The docstrings for these functions will now look like this:
 
 ```clojure
 ; -------------------------
-; exemplary.core-test/square
+; thing.doer/square
 ; ([n])
 ;   It squares numbers.
 ;
@@ -45,7 +45,7 @@ The docstrings for these functions will now look like this:
 ;  (= 25 (square 5))
 
 ; -------------------------
-; exemplary.core-test/half
+; thing.doer/half
 ; ([n])
 ;   It halves numbers.
 ;
