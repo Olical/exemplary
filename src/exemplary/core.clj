@@ -88,10 +88,11 @@
           (move-var original-ns (ns->test-ns original-ns) test-var-name))))))
 
 (defn process-ns!
-  "Runs all vars in a ns through process-var!"
-  [ns]
-  (doseq [var (vals (ns-interns ns))]
-    (when (var? var)
-      (process-var! var))))
+  "Runs all vars in a ns through process-var! When given no arguments it will process the current ns."
+  ([] (process-ns! *ns*))
+  ([ns]
+   (doseq [var (vals (ns-interns ns))]
+     (when (var? var)
+       (process-var! var)))))
 
-(process-ns! *ns*)
+(process-ns!)
