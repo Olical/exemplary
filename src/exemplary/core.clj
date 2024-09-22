@@ -1,24 +1,24 @@
 (ns exemplary.core
   (:require [clojure.string :as str]))
 
-(defn var->test-name-symbol
+(defn ^:no-doc var->test-name-symbol
   "Takes a var and returns a simple-symbol to be used in a deftest name."
   {::example '(= 'var->test-name-symbol-exemplary-test
                  (var->test-name-symbol #'var->test-name-symbol))}
   [var]
   (symbol (str (:name (meta var)) "-exemplary-test")))
 
-(defn test-ns?
+(defn ^:no-doc test-ns?
   "Given a namespace, returns true if it ends in -test."
   [ns]
   (str/ends-with? (str ns) "-test"))
 
-(defn ns->test-ns
+(defn ^:no-doc ns->test-ns
   "Given a namespace, returns the -test suffixed version of the same namespace."
   [ns]
   (create-ns (symbol (str ns "-test"))))
 
-(defn move-var
+(defn ^:no-doc move-var
   "Moves a var from one ns to another. Also copies all metadata over to the new var but without the :ns key which will be different now."
   [from-ns to-ns var-name]
   (let [var (ns-resolve from-ns var-name)]
