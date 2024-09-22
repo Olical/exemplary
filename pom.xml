@@ -89,28 +89,6 @@
     <sourceDirectory>src</sourceDirectory>
           
     
-    <resources>
-                
-      
-      <resource>
-                      
-        
-        <directory>src</directory>
-                      
-        
-        <excludes>
-                            
-          
-          <exclude>giants_shoulders/**</exclude>
-                          
-        
-        </excludes>
-                    
-      
-      </resource>
-              
-    
-    </resources>
                   
   
   

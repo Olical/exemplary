@@ -1,4 +1,4 @@
-(ns giants-shoulders.repl
+(ns ^:no-doc giants-shoulders.repl
   (:require [nrepl.server :as nrepl]
             [cider.nrepl :as cider]
             [taoensso.timbre :as log]
