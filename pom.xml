@@ -1,66 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-          
+              
+  
+  
   
   
   
   <modelVersion>4.0.0</modelVersion>
-          
+              
+  
+  
   
   
   
   <groupId>uk.me.oli</groupId>
-          
+              
+  
+  
   
   
   
   <artifactId>exemplary</artifactId>
-          
+              
   
   
   
-  <version>0.1.1</version>
-          
+  
+  
+  <version>0.1.2</version>
+              
+  
+  
   
   
   
   <name>exemplary</name>
-          
+              
+  
+  
   
   
   
   <licenses>
-                    
-    
-    
-    
-    <license>
-                              
-      
-      
-      
-      <name>Unlicense</name>
-                              
-      
-      
-      
-      <url>http://unlicense.org/</url>
-                              
-      
-      
-      
-      <distribution>repo</distribution>
                             
     
     
     
+    
+    
+    <license>
+                                          
+      
+      
+      
+      
+      
+      <name>Unlicense</name>
+                                          
+      
+      
+      
+      
+      
+      <url>http://unlicense.org/</url>
+                                          
+      
+      
+      
+      
+      
+      <distribution>repo</distribution>
+                                        
+    
+    
+    
+    
+    
     </license>
-                  
+                          
+  
+  
   
   
   
   </licenses>
-          
+              
+  
+  
   
   
   
@@ -77,92 +103,140 @@
     </dependency>
       
   </dependencies>
-          
+              
+  
+  
   
   
   
   <build>
-                    
-    
-    
-    
-    <sourceDirectory>src</sourceDirectory>
-          
-    
-                  
-  <resources>
-    <resource>
-      <directory>src</directory>
-      <excludes>
-        <exclude>giants_shoulders/**</exclude>
-      </excludes>
-    </resource>
-  </resources>
-  
-  
-  
-  </build>
-          
-  
-  
-  
-  <repositories>
-                    
-    
-    
-    
-    <repository>
-                              
-      
-      
-      
-      <id>clojars</id>
-                              
-      
-      
-      
-      <url>https://repo.clojars.org/</url>
                             
     
     
     
-    </repository>
+    
+    
+    <sourceDirectory>src</sourceDirectory>
+                  
+    
                   
   
-  
-  
-  </repositories>
+    
+    <resources>
+                
+      
+      <resource>
+                      
+        
+        <directory>src</directory>
+                      
+        
+        <excludes>
+                            
+          
+          <exclude>giants_shoulders/**</exclude>
+                          
+        
+        </excludes>
+                    
+      
+      </resource>
+              
+    
+    </resources>
           
   
   
   
+  
+  </build>
+              
+  
+  
+  
+  
+  
+  <repositories>
+                            
+    
+    
+    
+    
+    
+    <repository>
+                                          
+      
+      
+      
+      
+      
+      <id>clojars</id>
+                                          
+      
+      
+      
+      
+      
+      <url>https://repo.clojars.org/</url>
+                                        
+    
+    
+    
+    
+    
+    </repository>
+                          
+  
+  
+  
+  
+  
+  </repositories>
+              
+  
+  
+  
+  
+  
   <scm>
-                    
+                            
+    
+    
     
     
     
     <url>https://github.com/Olical/exemplary</url>
-                    
+                            
     
     
     
-    <tag>76fe07a6a303e3c3bd73e1bd6d4256ce2380fb70</tag>
-                    
+    
+    
+    <tag>387cd264d67261ecd96ec5c77faacc74cb6d3354</tag>
+                            
+    
+    
     
     
     
     <connection>scm:git:git@github.com:Olical/exemplary.git</connection>
-                    
+                            
+    
+    
     
     
     
     <developerConnection>scm:git:git@github.com:Olical/exemplary.git</developerConnection>
-                  
+                          
+  
+  
   
   
   
   </scm>
-        
+            
+
+
 
 
 
