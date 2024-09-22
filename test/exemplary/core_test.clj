@@ -36,10 +36,10 @@
 
 (t/deftest process-var!
   (t/testing "embeds their examples into their doc strings"
-    (t/is (= "It squares numbers.\n\nExamples:\n (= 100 (square 10))\n (= 25 (square 5))"
+    (t/is (= "It squares numbers.\n\n```clojure\n(= 100 (square 10))\n(= 25 (square 5))\n```"
              (:doc (meta #'square))))
 
-    (t/is (= "It halves numbers.\n\nExamples:\n (= 5 (half 10))"
+    (t/is (= "It halves numbers.\n\n```clojure\n(= 5 (half 10))\n```"
              (:doc (meta #'half)))))
 
   (t/testing "creates test vars under known names"

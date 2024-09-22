@@ -65,10 +65,9 @@
                original
                (when-not (empty? original)
                  "\n\n")
-               "Examples:\n"
-               (->> examples
-                    (map (comp #(str " " %) pr-str))
-                    (str/join "\n"))))))))
+               "```clojure\n"
+               (str/join "\n" (map pr-str examples))
+               "\n```"))))))
 
       (require 'clojure.test)
       (let [original-ns (:ns meta)
