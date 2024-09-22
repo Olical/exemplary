@@ -34,26 +34,26 @@ Exemplary will export examples that you write for your functions into the functi
 
 The docstrings for these functions will now look like this:
 
-```
+````
 -------------------------
 thing.doer/square
 ([n])
   It squares numbers.
 
-\`\`\`clojure
+```clojure
 (= 100 (square 10))
 (= 25 (square 5))
-\`\`\`
+```
 
 -------------------------
 thing.doer/half
 ([n])
   It halves numbers.
 
-\`\`\`clojure
+```clojure
 (= 5 (half 10))
-\`\`\`
 ```
+````
 
 We use markdown in order to format the code nicely in [cljdoc][]. We now also have some new tests defined in `thing.doer-test` that will be picked up and executed by our test runner.
 
