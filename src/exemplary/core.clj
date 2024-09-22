@@ -94,11 +94,4 @@
     (when (var? var)
       (process-var! var))))
 
-(defn process-every-ns!
-  "Runs all vars in all namespaces through process-var!"
-  []
-  (doseq [ns (all-ns)]
-    (process-ns! ns)))
-
-(time
- (process-every-ns!))
+(process-ns! *ns*)
