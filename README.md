@@ -12,11 +12,11 @@ Test runners like [kaocha][] can automatically re-run these example based tests 
 
 ```clojure
 (ns thing.doer
-  (:require [exemplary.core :as exm]))
+  (:require [exemplary.core :as ex]))
 
 (defn square
   "It squares numbers."
-  {::exemplary/examples
+  {::ex/examples
    '((= 100 (square 10))
      (= 25 (square 5)))}
   [n]
@@ -24,12 +24,12 @@ Test runners like [kaocha][] can automatically re-run these example based tests 
 
 (defn half
   "It halves numbers."
-  {::exemplary/example
+  {::ex/example
    '(= 5 (half 10))}
   [n]
   (/ n 2))
 
-(exm/process-ns!)
+(ex/process-ns!)
 ```
 
 The docstrings for these functions will now look like this:
