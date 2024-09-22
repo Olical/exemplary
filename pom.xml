@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>uk.me.oli</groupId>
   <artifactId>exemplary</artifactId>
-  <version>0.1.3</version>
+  <version>0.1.5</version>
   <name>exemplary</name>
   <licenses>
     <license>
@@ -38,7 +38,7 @@
   </repositories>
   <scm>
     <url>https://github.com/Olical/exemplary</url>
-    <tag>5ac58b8ece88089888bb943b933ac38aa5adb22e</tag>
+    <tag>1238ed755694994bec06605836f92fc7712ced24</tag>
     <connection>scm:git:git@github.com:Olical/exemplary.git</connection>
     <developerConnection>scm:git:git@github.com:Olical/exemplary.git</developerConnection>
   </scm>
