@@ -65,4 +65,9 @@
      (when (var? var)
        (process-var! var)))))
 
-(process-ns!)
+(defn process-all-ns!
+  "Process all loaded namespaces where their name matches the regular expression."
+  [re]
+  (doseq [ns (all-ns)]
+    (when (re-find re (str ns))
+      (process-ns! ns))))

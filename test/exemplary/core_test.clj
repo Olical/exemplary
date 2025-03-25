@@ -47,3 +47,15 @@
       (exemplary/process-ns! 'exemplary.core-test)
       (t/is (spy/called-with? exemplary/process-var! #'exemplary.core-test/square))
       (t/is (spy/called-with? exemplary/process-var! #'exemplary.core-test/half)))))
+
+(t/deftest process-all-ns!
+  (t/testing "calls process-var! on every var in every ns that matches the pattern"
+    (with-redefs [exemplary/process-var! (spy/spy)]
+      (exemplary/process-all-ns! #"^exemplary\.")
+      (t/is (spy/called-with? exemplary/process-var! #'exemplary.core-test/square))
+      (t/is (spy/called-with? exemplary/process-var! #'exemplary.core-test/half))))
+
+  (t/testing "doesn't call process-var! if the pattern doesn't match anything"
+    (with-redefs [exemplary/process-var! (spy/spy)]
+      (exemplary/process-all-ns! #"^something-that-doesnt-exist\.")
+      (t/is (spy/not-called? exemplary/process-var!)))))

@@ -30,6 +30,9 @@ Exemplary will export examples that you write for your functions into the functi
   (/ n 2))
 
 (ex/process-ns!)
+
+;; Alternatively...
+; (ex/process-all-ns! #"^thing\.")
 ```
 
 The docstrings for these functions will now look like this:
@@ -57,7 +60,11 @@ thing.doer/half
 
 We use markdown in order to format the code nicely in [cljdoc][]. We now also have some new tests defined in `thing.doer-test` that will be picked up and executed by our test runner.
 
-My current suggested workflow is to include a call to `process-ns!` at the bottom of your files that use this library. This is reloaded when you load the file in your REPL or when [kaocha][] detects changes and reloads the file.
+## Instrumentation
+
+You can either add `(ex/process-ns!)` to the bottom of the namespaces you wish to instrument or add a call to `(ex/process-all-ns! #"^my-project\.")` somewhere at the root of your system. This way you can have one instrumentation call that will find all of the examples for you automatically.
+
+You'll need to make sure this is re-executed when you make changes if you want the examples to be updated in your current REPL. Running it once should be enough for your test suite or cljdoc output though.
 
 ## Kaocha
 
