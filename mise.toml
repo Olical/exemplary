@@ -18,3 +18,7 @@ run = "clojure -X:test:repl giants-shoulders.repl/start!"
 
 [tasks.release]
 run = "clojure -M:release"
+depends_post = ["format-pom"]
+
+[tasks.format-pom]
+run = "xmllint --format pom.xml --output pom.xml"
