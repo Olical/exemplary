@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-clojure -M:release "$@"
-xmllint --format pom.xml --output pom.xml
