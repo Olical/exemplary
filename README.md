@@ -6,7 +6,7 @@
 >
 > &mdash; <cite>[Cambridge English Dictionary][dict-def]</cite>
 
-Exemplary will export examples that you write for your functions into the function doc string. It will also create tests in the matching `-test` suffixed namespace that can be executed by your test runner. Test runners like [kaocha][] can automatically re-run these example based tests as you make changes.
+Exemplary will export examples that you write for your functions into the function doc string. It will also create tests attached to the vars that can be executed by your test runner. Test runners like [kaocha][] can automatically re-run these example based tests as you make changes.
 
 ## Usage
 
@@ -58,6 +58,17 @@ thing.doer/half
 We use markdown in order to format the code nicely in [cljdoc][]. We now also have some new tests defined in `thing.doer-test` that will be picked up and executed by our test runner.
 
 My current suggested workflow is to include a call to `process-ns!` at the bottom of your files that use this library. This is reloaded when you load the file in your REPL or when [kaocha][] detects changes and reloads the file.
+
+## Kaocha
+
+You'll may need to tweak your kaocha configuration so it will run tests in namespaces that don't end with `-test`, make sure it's set to `".*"`.
+
+```clojure
+{:kaocha/tests
+ [{:kaocha/ns-patterns [".*"]}]}
+```
+
+## Feedback
 
 This library is still very new and I'd love to hear your thoughts on how we could improve this UX, maybe something like how [malli][]'s [dev instrumentation][malli-dev-inst] works? Please feel free to reach out to me on [mastodon][] or open a discussion here about the topic.
 
