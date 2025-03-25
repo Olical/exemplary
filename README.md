@@ -61,7 +61,7 @@ My current suggested workflow is to include a call to `process-ns!` at the botto
 
 ## Kaocha
 
-You'll may need to tweak your kaocha configuration so it will run tests in namespaces that don't end with `-test`, make sure it's set to `".*"`.
+You may need to tweak your kaocha configuration so it will run tests in namespaces that don't end with `-test`, make sure it's set to `".*"`.
 
 ```clojure
 {:kaocha/tests
