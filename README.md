@@ -6,7 +6,7 @@
 >
 > &mdash; <cite>[Cambridge English Dictionary][dict-def]</cite>
 
-Exemplary will export examples that you write for your functions into the function doc string. It will also create tests attached to the vars that can be executed by your test runner. Test runners like [kaocha][] can automatically re-run these example based tests as you make changes.
+Exemplary translates examples into function documentation and runnable tests. Test runners like [kaocha][] can automatically re-run these example based tests as you make changes while [cljdoc][] will display your examples with proper Clojure syntax highlighting.
 
 ## Usage
 
@@ -58,17 +58,15 @@ thing.doer/half
 ```
 ````
 
-We use markdown in order to format the code nicely in [cljdoc][]. We now also have some new tests defined in `thing.doer-test` that will be picked up and executed by our test runner.
-
 ## Instrumentation
 
 You can either add `(ex/process-ns!)` to the bottom of the namespaces you wish to instrument or add a call to `(ex/process-all-ns! #"^my-project\.")` somewhere at the root of your system. This way you can have one instrumentation call that will find all of the examples for you automatically.
 
-You'll need to make sure this is re-executed when you make changes if you want the examples to be updated in your current REPL. Running it once should be enough for your test suite or cljdoc output though.
+You will need to make sure this is re-executed when you make changes if you want the examples to be updated in your running REPL. Executing it once should be enough for your test suite or [cljdoc][] output.
 
 ## Kaocha
 
-You may need to tweak your kaocha configuration so it will run tests in namespaces that don't end with `-test`, make sure it's set to `".*"`.
+You may need to tweak your [kaocha][] configuration so it will run tests in namespaces that don't end with `-test`, make sure it's set to `".*"`.
 
 ```clojure
 {:kaocha/tests
@@ -77,7 +75,7 @@ You may need to tweak your kaocha configuration so it will run tests in namespac
 
 ## Feedback
 
-This library is still very new and I'd love to hear your thoughts on how we could improve this UX, maybe something like how [malli][]'s [dev instrumentation][malli-dev-inst] works? Please feel free to reach out to me on [mastodon][] or open a discussion here about the topic.
+I'd love to hear your thoughts, please feel free to reach out to me on [mastodon][] or open a discussion on this repository.
 
 [dict-def]: https://dictionary.cambridge.org/dictionary/english/exemplary
 [kaocha]: https://github.com/lambdaisland/kaocha
